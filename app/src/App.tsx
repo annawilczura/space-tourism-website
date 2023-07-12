@@ -3,15 +3,21 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './HomePage'
-import FirstPageDest from './FirstPageDest';
-import data from './data/data.json';
-import './models/PlanetData'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  Router,
+} from "react-router-dom";
 
 function App() {
-  const planetsData = data["destinations"] as PlanetData[];
   return (
-    <FirstPageDest {...planetsData[0]}  />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
 export default App
