@@ -1,5 +1,6 @@
 import data from './data/data.json'
 import './HomePage.sass';
+import { Link } from 'react-router-dom'
 
 function HomePage() {
     return (
@@ -9,7 +10,9 @@ function HomePage() {
                 <h1>{data['landing-page']['text-part2'].toUpperCase()}</h1>
                 <h2>{data['landing-page']['text-part3']}</h2>
             </div>
-            <button className='button'><span>Explore</span></button>
+            <Link to="/destinations/moon">
+                <button className='button'><span>Explore</span></button>
+            </Link>
         </div>
     )
 }
