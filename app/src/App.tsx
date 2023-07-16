@@ -10,6 +10,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import MainNavbar from './MainNavbar'
 
 function App() {
   const planets = data["destinations"] as PlanetData[];
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <MainNavbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path='/destinations/:name' element={<DestinationDetails planets = {planets}/>} />
