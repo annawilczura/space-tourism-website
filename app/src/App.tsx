@@ -1,27 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import HomePage from './HomePage'
 import data from './data/data.json'
-import DestinationDetails from './DestinationDetails'
+import TechDetails from './TechDetails'
 import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
-  Router,
 } from "react-router-dom";
-import FirstPageDest from './FirstPageDest'
+
 
 function App() {
-  const planets = data["destinations"] as PlanetData[];
+  const technology = data["technology"] as TechData[];
 
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path='/destinations/:name' element={<DestinationDetails planets = {planets}/>} />
+        <Route path='/technology/:name' element={<TechDetails technology = { technology }/>} />
       </Routes>
     </BrowserRouter>
   )
