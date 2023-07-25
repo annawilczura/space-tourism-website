@@ -9,19 +9,19 @@ function MainNavbar() {
                     00 home
                 </NavLink>
                 <NavLink 
-                    to='/destinations/moon'   
+                    to='/destinations'   
                     className={({ isActive, isPending }) => 
                     isPending ? 'pending' : isActive ? 'active' : ''}>
                     01 destination
                 </NavLink>
                 <NavLink 
-                    to='/crew/commander'   
+                    to='/crew'   
                     className={({ isActive, isPending }) => 
                     isPending ? 'pending' : isActive ? 'active' : ''}>
                     02 crew
                 </NavLink>
                 <NavLink 
-                    to='/technology/launch_vehicle'   
+                    to='/technology'   
                     className={({ isActive, isPending }) => 
                     isPending ? 'pending' : isActive ? 'active' : ''}>
                     03 technology

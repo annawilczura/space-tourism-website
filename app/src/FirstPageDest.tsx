@@ -1,17 +1,19 @@
 import './FirstPageDest.sass'
 import DestinationDetails from './DestinationDetails'
-import {
-    Route,
-    Routes
-} from 'react-router-dom'
+import { Navigate, Routes, Route } from 'react-router-dom'
 
-function FirstPageDest(props: PlanetData[]) {
-    const planets = props;
+function FirstPageDest(props : { planets : PlanetData[]}) {
+
+    const defaultPlanet = "moon";
 
     return (
-        <Routes>
-            <Route path='/destinations/:name' element={<DestinationDetails planets = {planets}/>} />
-        </Routes>
+        <div className='page-content'>
+            <h1>01 pick your destination</h1>
+            <Routes>
+                <Route index element={<Navigate to = {`/destinations/${defaultPlanet}`}/>} />
+                <Route path=':name' element={<DestinationDetails {...props}/>} />
+            </Routes>
+        </div>
     )
 }
 

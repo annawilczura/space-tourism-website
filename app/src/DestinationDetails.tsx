@@ -3,8 +3,10 @@ import { useParams } from 'react-router';
 
 function DestinationDetails(props : {planets : PlanetData[]}) {
 
-    const { name } = useParams();
+    const { name = "moon" } = useParams();
+    
     const planets = props.planets;
+
     const planet = planets.find(
         (planet : PlanetData) => planet.name.toLowerCase() === name
     );

@@ -1,6 +1,9 @@
-import './App.css'
+import './App.sass'
 import HomePage from './HomePage'
 import data from './data/data.json'
+import FirstPageDest from './FirstPageDest'
+import SecondPageCrew from './SecondPageCrew'
+import ThirdPageTech from './ThirdPageTech'
 import DestinationDetails from './DestinationDetails'
 import CrewDetails from './CrewDetails'
 import TechDetails from './TechDetails'
@@ -14,7 +17,7 @@ import MainNavbar from './MainNavbar'
 
 function App() {
   const planets = data["destinations"] as PlanetData[];
-  const crew= data["crew"] as CrewData[];
+  const crew = data["crew"] as CrewData[];
   const technology = data["technology"] as TechData[];
 
   return (
@@ -22,9 +25,9 @@ function App() {
       <MainNavbar/>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path='/destinations/:name' element={<DestinationDetails planets = {planets}/>} />
-        <Route path='/crew/:role' element={<CrewDetails crew = {crew}/>} />
-        <Route path='/technology/:name' element={<TechDetails technology = { technology }/>} />
+        <Route path='/destinations/*' element={<FirstPageDest planets = {planets}/>} />
+        <Route path='/crew/*' element={<SecondPageCrew crew = {crew}/>} />
+        <Route path='/technology/*' element={<ThirdPageTech technology = { technology }/>} />
       </Routes>
     </BrowserRouter>
   )
