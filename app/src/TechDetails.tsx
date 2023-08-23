@@ -1,4 +1,3 @@
-import './ThirdPageTech.sass'
 import Navbar from './TechNavbar'
 import { useParams } from 'react-router';
 
@@ -12,14 +11,16 @@ function TechDetails(props : {technology : TechData[]}) {
 
     if (techObject) {
         return (
-            <div className = "container">
-                <Navbar technology = {technology}></Navbar>
-                <div className = "text">
-                    <h3>The technology...</h3>
-                    <h1>{techObject.name}</h1>
-                    <p>{techObject.description}</p>
+            <div className = "flex grow flex-col-reverse md:flex-row justify-end md:justify-between">
+                <div className='tech-text-container'>
+                    <Navbar technology = {technology}></Navbar>
+                    <div className = "text">
+                        <h3 className='md:text-left text-sm sm:text-base font-serif1 font-light tracking-widest text-violet'>THE TERMINOLOGY...</h3>
+                        <h1 className='font-sans text-white md:text-left text-2xl sm:text-5xl md:text-6xl py-3 max-w-[100%]'>{techObject.name.toUpperCase()}</h1>
+                        <p className='p-text md:text-left max-w-[30rem]'>{techObject.description}</p>
+                    </div>
                 </div>
-                <img src={`/${techObject.images.portrait}`} alt ={ techObject.name }></img>
+                <div className={`tech-image ${name === "launch_vehicle" ? "bg-launch-vehicle-ls md:bg-launch-vehicle-pt" : ""}${name === "space_capsule" ? "bg-space-capsule-ls md:bg-space-capsule-pt" : ""}${name === "spaceport" ? "bg-spaceport-ls md:bg-spaceport-pt" : ""}`} aria-label={`photo of ${techObject.name}`}></div>
             </div>
         )
     } else {

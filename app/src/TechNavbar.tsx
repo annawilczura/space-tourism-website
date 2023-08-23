@@ -1,20 +1,20 @@
 import { NavLink } from "react-router-dom"
 
-function DestinationNavbar(props: { technology: TechData[] }) {
+function TechNavbar(props: { technology: TechData[] }) {
     const navButtons = props.technology.map( (techObject, index) => {
         return (
-            <li key={ techObject.name.toLowerCase().split(' ').join('-') }>
-                <NavLink to={`/technology/${techObject.name.toLowerCase().split(' ').join('_')}`}>
+            <NavLink to={`/technology/${techObject.name.toLowerCase().split(' ').join('_')}`}>
+                <li className='tech-navlink' key={ techObject.name.toLowerCase().split(' ').join('-') }>
                     { index + 1 }
-                </NavLink>
-            </li>
+                </li>
+            </NavLink>
         )
     })
     return (
-        <ul>
+        <ul className="flex md:flex-col text-white justify-center md:justify-normal h-full gap-5 mr-8">
             {navButtons}
         </ul>
     )
 }
 
-export default DestinationNavbar
+export default TechNavbar

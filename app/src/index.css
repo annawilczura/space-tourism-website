@@ -1,26 +1,122 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300;500;600&family=Barlow:wght@100;200;300;400;500&family=Bellefair&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+#root {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+.active .nav-element,
+.active.nav-element-dest {
+  @apply border-b-white hover:border-b-white;
+}
+
+.active.nav-element-dest {
+  @apply text-white;
+}
+
+.active .tech-navlink {
+  @apply bg-white text-navy-blue;
+}
+
+.crew-navlink {
+  @apply h-3 w-3 md:h-[0.95rem] md:w-[0.95rem] bg-white opacity-20  hover:opacity-50 hover:ease-in duration-300 rounded-full;
+}
+
+.crew-navlink.active {
+  @apply opacity-100;
+}
+
+.tech-navlink {
+  @apply rounded-full border-[0.5px] border-opacity-25 hover:border-opacity-100 hover:ease-in duration-300 border-white flex items-center justify-center h-10 w-10 sm:h-16 sm:w-16 md:h-20 md:w-20 text-base sm:text-2xl md:text-4xl my-8 md:my-0;
+}
+
+.crew-image {
+  @apply h-[35%] border-b-[1px] border-b-white border-opacity-10 sm:border-none sm:h-[55%] md:grow-0 md:self-end mt-5 md:h-full min-w-[22rem] w-[90%] bg-contain bg-no-repeat bg-bottom md:mx-6;
+}
+
+.tech-image {
+  @apply h-[10rem] sm:h-[20rem] md:h-[80%] min-w-[22rem] md:w-1/2 bg-cover md:bg-contain md:bg-right bg-no-repeat bg-bottom;
+}
+
+.crew-text-container {
+  @apply flex md:h-[80%] min-h-[18.5rem] md:min-h-[25rem] md:max-h-[30rem] md:w-[50%] self-center flex-col-reverse sm:flex-col md:flex-grow-0 sm:items-center md:items-start justify-between px-6 md:pl-24 shrink-0;
+}
+
+.tech-text-container {
+  @apply flex md:h-[80%] min-h-[18.5rem] md:min-h-[25rem] md:max-h-[30rem] md:w-[50%] self-center flex-col md:flex-row sm:items-center md:items-start justify-between px-6 md:pl-24 shrink-0;
+}
+
+.explore-button {
+  @apply bg-white rounded-full w-[9.5rem] h-[9.5rem] sm:w-[15.2rem] sm:h-[15.2rem] md:w-[17rem] md:h-[17rem];
+}
+
+.home-heading-main {
+  @apply text-white font-sans text-7xl sm:text-9xl;
+}
+
+.main-nav-container {
+  @apply relative flex justify-between md:justify-start h-24 pl-4 items-center shrink-0 md:mt-[3vh] md:ml-6;
+}
+
+.main-nav-container line {
+  @apply stroke-light-gray;
+}
+
+.page-heading {
+  @apply text-base sm:text-xl md:text-2xl tracking-widest text-white text-center sm:text-left pl-4 my-[3vh] sm:my-[5vh] md:my-0 md:pl-24 font-serif1 font-light;
+}
+
+.p-text {
+  @apply text-violet font-serif2 text-sm sm:text-lg leading-6 md:leading-9 font-light;
+}
+
+.text {
+  @apply text-white;
+}
+
+.home-heading {
+  @apply text-violet font-serif1 font-light text-base sm:text-xl md:text-3xl tracking-widest;
+}
+
+.heading-number {
+  @apply text-white font-serif1 font-bold tracking-widest opacity-25 pr-2;
+}
+
+.home-page {
+  @apply flex flex-col h-screen overflow-y-auto bg-scroll bg-cover bg-home sm:bg-home-sm md:bg-home-md;
+}
+
+.destination-page {
+  @apply flex flex-col h-screen overflow-y-auto bg-scroll bg-cover bg-destination sm:bg-destination-sm md:bg-destination-md;
+}
+
+.crew-page {
+  @apply flex flex-col h-screen overflow-y-auto bg-scroll bg-cover bg-crew sm:bg-crew-sm md:bg-crew-md;
+}
+
+.technology-page {
+  @apply flex flex-col h-screen overflow-y-auto bg-cover bg-technology sm:bg-technology-sm md:bg-technology-md;
+}
+
+.nav-element {
+  @apply flex items-center h-full font-serif1 text-white text-sm md:text-base font-light tracking-widest border-b-transparent border-b-2 hover:border-b-light-gray hover:ease-in duration-200;
+}
+
+.nav-element-dest {
+  @apply flex items-center h-full font-serif1 text-violet text-sm sm:text-base font-light tracking-widest border-b-2 border-b-transparent hover:border-b-light-gray hover:ease-in duration-200;
+}
+
+.nav-element span {
+  @apply font-normal pr-2 hidden md:block;
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
 }
 
 body {
@@ -34,36 +130,4 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
 }

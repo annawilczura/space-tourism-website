@@ -1,18 +1,17 @@
 import { NavLink } from "react-router-dom"
 
-function DestinationNavbar(props: {crew: CrewData[]}) {
+function CrewNavbar(props: {crew: CrewData[]}) {
     const crewLinks = props.crew.map( person => {
         return (
-                <NavLink to={`/crew/${person.role.split(' ').join('_').toLowerCase()}`}>
-                    <li key={person.role.split(' ').join('_')}></li>
+                <NavLink className='crew-navlink' to={`/crew/${person.role.split(' ').join('_').toLowerCase()}`}>
                 </NavLink>
         )
     })
     return (
-        <div>
+        <div className='self-center md:self-start w-[7rem] h-4 md:w-[8.5rem] flex justify-between mt-6'>
             {crewLinks}
         </div>
     )
 }
 
-export default DestinationNavbar
+export default CrewNavbar

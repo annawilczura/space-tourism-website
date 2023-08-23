@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import TechDetails from './TechDetails'
 import {
     Navigate,
@@ -5,13 +6,17 @@ import {
     Routes
 } from 'react-router-dom'
 
-function ThirdPageTech(props : { technology : TechData[] } ) {
+function ThirdPageTech(props : { heading: string, technology : TechData[], change: (appContainerClassName : string) => void } ) {
+
+    useEffect(() => {
+        props.change('technology-page');
+    });
 
     const defaultTech = "launch_vehicle";
 
     return (
-        <div>
-            <h1>03 space launch 101</h1>
+        <div className='flex h-full flex-col w-full'>
+            <h1 className='page-heading'><span className='heading-number'>02</span> {props.heading.toUpperCase()}</h1>
             <Routes>
                 <Route index element={<Navigate to={`/technology/${defaultTech}`}/>} />
                 <Route path=':name' element={<TechDetails {...props}/>} />
