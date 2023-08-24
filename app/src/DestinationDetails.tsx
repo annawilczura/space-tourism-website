@@ -13,7 +13,7 @@ function DestinationDetails(props : {planets : PlanetData[]}) {
 
     if (planet) {
         return (
-            <div className='flex sm:flex-wrap md:flex-nowrap flex-col md:flex-row h-full w-full mt-[5vh] md:justify-evenly items-center md:items-start'>
+            <div className='flex sm:flex-wrap md:flex-nowrap flex-col md:flex-row h-full w-full md:mt-[5vh] md:justify-evenly items-center md:items-start'>
                 <div className='flex'>
                     <img className='max-w-[170px] max-h-[170px] sm:max-w-[300px] sm:max-h-[300px] md:max-w-[445px] md:max-h-[445px] sm:mt-[4vh]'src={`/${planet.images.png}`} alt ={planet.name}></img>
                 </div>

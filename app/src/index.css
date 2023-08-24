@@ -10,13 +10,12 @@
   text-align: center;
 }
 
-.active .nav-element,
-.active.nav-element-dest {
-  @apply border-b-white hover:border-b-white;
+.active.nav-element {
+  @apply border-r-white hover:border-r-white sm:border-b-white sm:hover:border-b-white;
 }
 
 .active.nav-element-dest {
-  @apply text-white;
+  @apply text-white border-b-white hover:border-b-white;
 }
 
 .active .tech-navlink {
@@ -104,7 +103,7 @@
 }
 
 .nav-element {
-  @apply flex items-center h-full font-serif1 text-white text-sm md:text-base font-light tracking-widest border-b-transparent border-b-2 hover:border-b-light-gray hover:ease-in duration-200;
+  @apply flex items-center h-[2rem] my-[0.5rem] sm:my-0 sm:h-full font-serif1 text-white text-base sm:text-sm md:text-base font-light tracking-widest border-r-[3px] border-r-transparent hover:border-r-light-gray sm:border-b-transparent sm:border-b-2 sm:border-r-0 sm:hover:border-b-light-gray hover:ease-in duration-200;
 }
 
 .nav-element-dest {
@@ -112,7 +111,7 @@
 }
 
 .nav-element span {
-  @apply font-normal pr-2 hidden md:block;
+  @apply font-normal pr-2 block sm:hidden md:block;
 }
 
 a {
