@@ -1,5 +1,6 @@
-import Navbar from './CrewNavbar'
-import { useParams } from 'react-router'
+import Navbar from './CrewNavbar';
+import { useParams } from 'react-router';
+import { CrewData } from './models/CrewData';
 
 function CrewDetails(props : {crew : CrewData[], heading: string}) {
 

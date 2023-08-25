@@ -1,4 +1,4 @@
-interface TechData {
+export interface TechData {
     name: string,
     images: {
         portrait: string;

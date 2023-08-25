@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { CrewData } from "./models/CrewData";
 
 function CrewNavbar(props: {crew: CrewData[]}) {
     const crewLinks = props.crew.map( person => {

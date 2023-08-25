@@ -1,4 +1,4 @@
-interface CrewData {
+export interface CrewData {
     name: string,
     images: {
         png: string;

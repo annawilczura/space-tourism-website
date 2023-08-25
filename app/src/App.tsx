@@ -4,8 +4,11 @@ import data from './data/data.json'
 import FirstPageDest from './FirstPageDest'
 import SecondPageCrew from './SecondPageCrew'
 import ThirdPageTech from './ThirdPageTech'
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import MainNavbar from './MainNavbar'
+import { PlanetData } from './models/PlanetData';
+import { CrewData } from './models/CrewData';
+import { TechData } from './models/TechData';
 
 function App() {
   const planets = data["destinations"] as PlanetData[];

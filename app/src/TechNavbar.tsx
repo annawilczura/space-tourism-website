@@ -1,4 +1,5 @@
-import { NavLink } from "react-router-dom"
+import { NavLink } from "react-router-dom";
+import { TechData } from "./models/TechData";
 
 function TechNavbar(props: { technology: TechData[] }) {
     const navButtons = props.technology.map( (techObject, index) => {
@@ -11,7 +12,7 @@ function TechNavbar(props: { technology: TechData[] }) {
         )
     })
     return (
-        <ul className="flex md:flex-col text-white justify-center md:justify-normal h-full gap-5 mr-8">
+        <ul className="flex md:flex-col text-white justify-center md:justify-normal h-full gap-5 md:mr-8">
             {navButtons}
         </ul>
     )

@@ -32,7 +32,7 @@ export default {
         'crew-sm': "url('/assets/crew/background-crew-tablet.jpg')",
         'crew-md': "url('/assets/crew/background-crew-desktop.jpg')",
         'technology': "url('/assets/technology/background-technology-mobile.jpg')",
-        'technology-sm': "url('/assets/technology//background-technology-tablet.jpg')",
+        'technology-sm': "url('/assets/technology/background-technology-tablet.jpg')",
         'technology-md': "url('/assets/technology/background-technology-desktop.jpg')",
         'commander': "url('/assets/crew/image-douglas-hurley.png')",
         'mission_specialist': "url('/assets/crew/image-mark-shuttleworth.png')",

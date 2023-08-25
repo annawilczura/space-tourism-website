@@ -1,5 +1,6 @@
 import Navbar from './TechNavbar'
 import { useParams } from 'react-router';
+import { TechData } from './models/TechData';
 
 function TechDetails(props : {technology : TechData[]}) {
 
