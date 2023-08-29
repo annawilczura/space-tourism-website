@@ -1,4 +1,4 @@
-import Navbar from './DestinationNavbar'
+import Navbar from './DestinationNavbar';
 import { useParams } from 'react-router';
 import { PlanetData } from './models/PlanetData';
 
@@ -11,14 +11,16 @@ function DestinationDetails(props : {planets : PlanetData[]}) {
     const planet = planets.find(
         (planet : PlanetData) => planet.name.toLowerCase() === name
     );
-
-    const imageUrl = planet!.images.png;
+    
+    function getImageUrl() {
+        return new URL(`/assets/destination/image-${name}.png`, import.meta.url).href
+    }
 
     if (planet) {
         return (
             <div className='flex sm:flex-wrap md:flex-nowrap flex-col md:flex-row h-full w-full md:mt-[5vh] md:justify-evenly items-center md:items-start'>
                 <div className='flex'>
-                    <img className='max-w-[170px] max-h-[170px] sm:max-w-[300px] sm:max-h-[300px] md:max-w-[445px] md:max-h-[445px] sm:mt-[4vh]'src={imageUrl} alt ={planet.name}></img>
+                    <img className='max-w-[170px] max-h-[170px] sm:max-w-[300px] sm:max-h-[300px] md:max-w-[445px] md:max-h-[445px] sm:mt-[4vh]' src={getImageUrl()} alt ={import.meta.env.BASE_URL}></img>
                 </div>
                 <div className = "flex flex-col text w-[80%] sm:w-[70%] md:w-[28rem]">
                     <div className='flex w-full items-center justify-center md:justify-start'>
