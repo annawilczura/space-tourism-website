@@ -49,7 +49,7 @@ jobs:
           # Upload dist repository
           path: "./app/dist"
       - name: Create 404.html
-        run: cp dist/index.html 404.html
+        run: cp dist/index.html dist/404.html
         working-directory: app
       - name: Deploy to GitHub Pages
         id: deployment
