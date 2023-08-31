@@ -1,4 +1,5 @@
 import Navbar from './DestinationNavbar';
+import NoMatch from './NoMatch';
 import { useParams } from 'react-router';
 import { PlanetData } from './models/PlanetData';
 
@@ -44,7 +45,7 @@ function DestinationDetails(props : {planets : PlanetData[]}) {
         )
     } else {
         return (
-            <div>This link doesn't exist</div>
+            <NoMatch />
         )
     }
 
