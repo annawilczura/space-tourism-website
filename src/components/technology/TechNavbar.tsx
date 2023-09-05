@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import { TechData } from "./models/TechData";
+import { TechData } from "../../models/TechData";
 
 function TechNavbar(props: { technology: TechData[] }) {
     const navButtons = props.technology.map( (techObject, index) => {

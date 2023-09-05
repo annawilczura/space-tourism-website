@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import HomePage from './HomePage'
+import HomePage from './components/home/HomePage'
 import data from './data/data.json'
-import FirstPageDest from './FirstPageDest'
-import SecondPageCrew from './SecondPageCrew'
-import ThirdPageTech from './ThirdPageTech'
-import NoMatch from './NoMatch'
+import FirstPageDest from './components/destinations/FirstPageDest'
+import SecondPageCrew from './components/crew/SecondPageCrew'
+import ThirdPageTech from './components/technology/ThirdPageTech'
+import NoMatch from './components/NoMatch'
 import { Routes, Route } from 'react-router-dom';
-import MainNavbar from './MainNavbar'
+import MainNavbar from './components/MainNavbar'
 import { PlanetData } from './models/PlanetData';
 import { CrewData } from './models/CrewData';
 import { TechData } from './models/TechData';

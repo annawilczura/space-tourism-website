@@ -1,7 +1,7 @@
 import Navbar from './TechNavbar';
-import NoMatch from './NoMatch';
+import NoMatch from '../NoMatch';
 import { useParams } from 'react-router';
-import { TechData } from './models/TechData';
+import { TechData } from '../../models/TechData';
 
 function TechDetails(props : {technology : TechData[]}) {
 

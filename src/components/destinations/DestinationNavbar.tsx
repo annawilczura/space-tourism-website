@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { PlanetData } from './models/PlanetData';
+import { PlanetData } from '../../models/PlanetData';
 
 function DestinationNavbar(props: {planets: PlanetData[]}) {
     const planetNames = props.planets.map( planet => {

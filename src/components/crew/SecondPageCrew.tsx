@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import CrewDetails from './CrewDetails'
 import { Navigate } from 'react-router-dom'
-import { CrewData } from './models/CrewData'
+import { CrewData } from '../../models/CrewData'
 import {
     Route,
     Routes

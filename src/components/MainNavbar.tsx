@@ -1,8 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect, MouseEventHandler } from 'react';
-import logoUrl from "../assets/shared/logo.svg?url";
-import closeIconUrl from "../assets/shared/icon-close.svg?url";
-import burgerIconUrl from "../assets/shared/icon-hamburger.svg"
+import logoUrl from "/assets/shared/logo.svg?url";
+import closeIconUrl from "/assets/shared/icon-close.svg?url";
+import burgerIconUrl from "/assets/shared/icon-hamburger.svg"
 
 function MainNavbar() {
     useEffect(() => {

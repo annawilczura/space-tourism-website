@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import DestinationDetails from './DestinationDetails';
 import { Navigate, Routes, Route } from 'react-router-dom';
-import { PlanetData } from './models/PlanetData';
+import { PlanetData } from '../../models/PlanetData';
 
 function FirstPageDest(props : { heading: string, planets : PlanetData[], change: (appContainerClassName : string) => void}) {
     

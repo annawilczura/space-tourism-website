@@ -1,7 +1,7 @@
 import Navbar from './CrewNavbar';
-import NoMatch from './NoMatch';
+import NoMatch from '../NoMatch';
 import { useParams } from 'react-router';
-import { CrewData } from './models/CrewData';
+import { CrewData } from '../../models/CrewData';
 
 function CrewDetails(props : {crew : CrewData[], heading: string}) {
 

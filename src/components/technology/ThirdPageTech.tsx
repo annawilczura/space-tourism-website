@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import TechDetails from './TechDetails'
-import { TechData } from './models/TechData';
+import { TechData } from '../../models/TechData';
 import {
     Navigate,
     Route,
