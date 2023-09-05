@@ -6,7 +6,8 @@ function DestinationNavbar(props: {planets: PlanetData[]}) {
         return (
             <NavLink 
                 className={({ isActive, isPending }) => isPending ? "nav-element-dest" : isActive ? "active nav-element-dest" : "nav-element-dest"}
-                to={`/destinations/${planet.name.toLowerCase()}`}>
+                to={`/destinations/${planet.name.toLowerCase()}`}
+                key={planet.name}>
                 {planet.name.toUpperCase()}
             </NavLink>
         )

@@ -26,7 +26,8 @@ function MainNavbar() {
                 className={({ isActive, isPending }) =>
                 isPending ? "nav-element" : isActive ? "active nav-element" : "nav-element"
               }
-                onClick={handleClick}>
+                onClick={handleClick}
+                key={el.title.toLowerCase()}>
                     <span>{el.number}</span> 
                     {el.title}
             </NavLink>
