@@ -34,17 +34,17 @@ function MainNavbar() {
     })
     return (
         <div className='main-nav-container'>
-            <img src={logoUrl} className='w-[40px] sm:w-[48px] md:mr-10'></img>
+            <img src={logoUrl} className='w-[40px] sm:w-[48px] md:mr-10' alt='logo'></img>
             <svg className='hidden md:block grow relative -right-6 z-30' height="1" width="200">
                 <line x1="0" y1="0" x2="1000" y2="0"/>
             </svg>
-            <img onClick={handleClick} className='sm:hidden pr-6 cursor-pointer' src={burgerIconUrl}></img>
+            <img onClick={handleClick} className='sm:hidden pr-6 cursor-pointer' src={burgerIconUrl} alt='menu icon'></img>
             {
                 width < breakpoint
                 ? isShown &&
                 (<div className='absolute top-0 left-0 h-screen w-screen' onClick={handleClick}>
                     <div className='absolute top-0 right-0 flex flex-col h-screen w-[20rem] bg-white bg-opacity-5 backdrop-blur-md z-20'>
-                        <img className='self-end cursor-pointer m-10' onClick={handleClick} src={closeIconUrl}></img>
+                        <img className='self-end cursor-pointer m-10' onClick={handleClick} src={closeIconUrl} alt='close icon'></img>
                         <nav className='flex flex-col sm:flex-row w-full h-full justify-start sm:justify-evenly pt-10 pl-10 pr-[2px]'>
                             {navLinks}
                         </nav>
