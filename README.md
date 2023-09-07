@@ -33,8 +33,11 @@ My goals:
 
 ### Installation
 
-$ npm install  
-$ npm run dev
+```
+cd space-tourism-website
+npm install
+npm run dev
+```
 
 ### Screenshot
 
@@ -47,6 +50,7 @@ $ npm run dev
 ### Built with
 
 - Mobile-first workflow
+- RWD
 - [React](https://reactjs.org/)
 - [React Router](https://reactrouter.com)
 - [Tailwind CSS](https://tailwindcss.com/)
@@ -61,8 +65,8 @@ I learned how to:
 - create functional React components
 - use state in React app
 - achieve basic page routing with React Router
-- style app with Tailwind CSS with RWD
-- dyploy a site on Github Pages with working routing
+- make responsive styling using Tailwind CSS
+- deploy a site on Github Pages with working routing
 
 ## Author
 
