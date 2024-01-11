@@ -39,6 +39,9 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+        env:
+          VITE_RANDOM_VARIABLE: ${{vars.VITE_RANDOM_VARIABLE}}
+          VITE_RANDOM_VARIABLE2: ${{vars.VITE_RANDOM_VARIABLE2}}
       - name: Create 404.html
         run: cp dist/index.html dist/404.html
       - name: Setup Pages

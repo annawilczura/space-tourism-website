@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function HomePage(props: { change: (appContainerClassName: string) => void }) {
   useEffect(() => {
     props.change("home-page");
+    console.log(import.meta.env.VITE_RANDOM_VARIABLE);
   });
 
   const buttonText = "EXPLORE";
