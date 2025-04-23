@@ -45,7 +45,7 @@ npm run dev
 
 ### Links
 
-- Live Site URL: [space-tourism-website](https://anq92.github.io/space-tourism-website)
+- Live Site URL: [space-tourism-website](https://annawilczura.github.io/space-tourism-website)
 
 ### Built with
 
